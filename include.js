@@ -4,8 +4,15 @@ let cards = [
     artName: 'Loader Animation',
     pageLink: './art/tarunmankar/index.html',
     imageLink: './art/tarunmankar/LoaderAnimation.gif',
-    author: 'loader/',
-    githubLink: 'https://github.com/easianyu',
+    author: 'Source Code',
+    githubLink: 'https://github.com/easianyu/art/tarunmankar',
+  },
+  {
+    artName: 'Mobile JD',
+    pageLink: './exercise/jd/index.html',
+    imageLink: './exercise/jd/mobile-jd.png',
+    author: 'Source Code',
+    githubLink: 'https://github.com/easianyu/css-hub/exercise/jd',
   },
 ];
 
