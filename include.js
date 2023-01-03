@@ -12,7 +12,14 @@ let cards = [
     pageLink: './exercise/jd/index.html',
     imageLink: './exercise/jd/mobile-jd.png',
     author: 'Source Code',
-    githubLink: 'https://github.com/easianyu/css-hub/exercise/jd',
+    githubLink: 'https://github.com/easianyu/css-hub/tree/master/exercise/jd',
+  },
+  {
+    artName: 'Mobile C-Trip',
+    pageLink: './exercise/ctrip/index.html',
+    imageLink: './exercise/ctrip/ctrip-mobile.gif',
+    author: 'Source Code',
+    githubLink: 'https://github.com/easianyu/css-hub/tree/master/exercise/ctrip',
   },
 ];
 
