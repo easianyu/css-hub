@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+
+      body {
+        background-color: #34495e;
+      }
+
+      main {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100vw;
+        height: 100vh;
+        background-color: #38485c;
+        transform: scale(0);
+        animation-name: scale, bgc, rds;
+        animation-duration: 2s, 4s, 1s;
+        animation-fill-mode: forwards;
+      }
+
+      main::after {
+        content: 'Easian Yu';
+        font-size: 2em;
+        color: wheat;
+        opacity: 0;
+        animation-name: opacity;
+        animation-duration: 2s;
+        animation-delay: 4s;
+        animation-fill-mode: forwards;
+      }
+
+      @keyframes opacity {
+        to {
+          opacity: 0.8;
+        }
+      }
+
+      @keyframes scale {
+        25% {
+          transform: scale(0.5);
+        }
+
+        50% {
+          transform: scale(1) rotate(360deg);
+        }
+
+        75% {
+          transform: scale(0.5);
+        }
+
+        to {
+          transform: scale(1);
+        }
+      }
+
+      @keyframes bgc {
+        25% {
+          background-color: #d55846;
+        }
+
+        50% {
+          background-color: #bec2c6;
+        }
+
+        75% {
+          background-color: #5296d6;
+        }
+
+        100% {
+          background-color: #59ba9d;
+        }
+      }
+
+      @keyframes rds {
+        75%,
+        25% {
+          border-radius: 50%;
+        }
+
+        50% {
+          border-radius: 0%;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <div></div>
+    </main>
+  </body>
+</html>

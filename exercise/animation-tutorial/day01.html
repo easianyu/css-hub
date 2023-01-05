@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        width: 0;
+        padding: 0;
+      }
+
+      body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100vw;
+        height: 100vh;
+        background-color: #38485c;
+      }
+
+      main {
+        width: 400px;
+        height: 400px;
+        border: solid 1px #ddd;
+      }
+
+      div {
+        width: 100px;
+        height: 100px;
+        background-color: #eac545;
+        animation-name: translate, bgc, rds;
+        animation-duration: 4s;
+      }
+
+      @keyframes translate {
+        25% {
+          transform: translateX(300px);
+        }
+
+        50% {
+          transform: translate(300px, 300px);
+        }
+
+        75% {
+          transform: translateY(300px);
+        }
+      }
+
+      @keyframes bgc {
+        25% {
+          background-color: #d55846;
+        }
+
+        50% {
+          background-color: #bec2c6;
+        }
+
+        75% {
+          background-color: #5296d6;
+        }
+      }
+
+      @keyframes rds {
+        75%,
+        25% {
+          border-radius: 50%;
+        }
+
+        50% {
+          border-radius: 0%;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <div></div>
+    </main>
+  </body>
+</html>
