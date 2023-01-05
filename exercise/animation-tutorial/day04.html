@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+
+      body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100vw;
+        height: 100vh;
+        background-color: #34495e;
+      }
+
+      ul {
+        display: flex;
+        justify-content: space-between;
+        list-style: none;
+        width: 800px;
+        height: 120px;
+      }
+
+      ul li {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        flex: 1;
+        color: red;
+        /* border: #fff 1px solid;  */
+      }
+
+      i.fa {
+        position: absolute;
+        font-size: 3em;
+        animation-name: yyx;
+        animation-duration: 1s;
+        animation-iteration-count: infinite;
+      }
+
+      li:nth-child(1) > i {
+        animation-direction: normal;
+      }
+
+      li:nth-child(2) > i {
+        animation-direction: reverse;
+      }
+
+      li:nth-child(3) > i {
+        animation-direction: alternate;
+      }
+
+      li:nth-child(4) > i {
+        animation-direction: alternate-reverse;
+      }
+
+      span {
+        position: absolute;
+        bottom: 0;
+      }
+
+      @keyframes yyx {
+        to {
+          transform: scale(3);
+        }
+      }
+    </style>
+    <title>Document</title>
+  </head>
+  <body>
+    <ul>
+      <li><i class="fa fa-heart" aria-hidden="true"></i><span>normal</span></li>
+      <li><i class="fa fa-heart" aria-hidden="true"></i><span>reverse</span></li>
+      <li><i class="fa fa-heart" aria-hidden="true"></i><span>alternate</span></li>
+      <li><i class="fa fa-heart" aria-hidden="true"></i><span>alternate-reverse</span></li>
+    </ul>
+  </body>
+</html>

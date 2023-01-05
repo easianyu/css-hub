@@ -21,6 +21,14 @@ let cards = [
     author: 'Source Code',
     githubLink: 'https://github.com/easianyu/css-hub/tree/master/exercise/ctrip',
   },
+
+  {
+    artName: 'Bouncing ball',
+    pageLink: './art/bouncing-ball/index.html',
+    imageLink: './art/bouncing-ball/bouncing-ball.gif',
+    author: 'Source Code',
+    githubLink: 'https://github.com/easianyu/css-hub/tree/master/art/bouncing-ball',
+  },
 ];
 
 // +--------------------------------------------------------------------------------+
