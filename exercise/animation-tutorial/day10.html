@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+
+      body {
+        display: grid;
+        grid-template: 1fr/1fr;
+        width: 100vw;
+        height: 100vh;
+        background-color: #34495e;
+      }
+
+      section {
+        display: grid;
+        grid-template: repeat(2, 1fr) / repeat(4, 1fr);
+        width: 400px;
+        height: 200px;
+        background-color: #f0bf1e;
+        align-self: center;
+        justify-self: center;
+      }
+
+      div {
+        box-sizing: border-box;
+        position: relative;
+        text-align: center;
+        border: 1px solid #000;
+      }
+
+      div:nth-child(1)::before {
+        content: 'START';
+        width: 98px;
+        height: 98px;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 2;
+        background-color: #8330a1;
+        animation-name: yyx;
+        animation-duration: 2s;
+        animation-iteration-count: infinite;
+        animation-timing-function: steps(4, start);
+        animation-play-state: paused;
+      }
+
+      div:nth-child(5)::before {
+        content: 'END';
+        width: 98px;
+        height: 98px;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 2;
+        background-color: #35c76a;
+        animation-name: yyx;
+        animation-duration: 2s;
+        animation-iteration-count: infinite;
+        animation-timing-function: steps(4, end);
+        animation-play-state: paused;
+      }
+
+      div:hover::before {
+        animation-play-state: running;
+      }
+
+      @keyframes yyx {
+        to {
+          transform: translateX(400px);
+        }
+      }
+    </style>
+    <title>Document</title>
+  </head>
+  <body>
+    <section>
+      <div>1</div>
+      <div>2</div>
+      <div>3</div>
+      <div>4</div>
+      <div>5</div>
+      <div>6</div>
+      <div>7</div>
+      <div>8</div>
+    </section>
+  </body>
+</html>

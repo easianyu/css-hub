@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+
+      body {
+        width: 100vw;
+        height: 100vh;
+        background-color: #34495e;
+        display: grid;
+        grid-template: 1fr / repeat(5, 1fr);
+      }
+
+      div {
+        grid-column: 3/4;
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        justify-self: center;
+        background: radial-gradient(circle at center, #85bff7, #336cb8);
+        animation-name: move;
+        animation-duration: 4s;
+        animation-iteration-count: infinite;
+        animation-fill-mode: forwards;
+      }
+
+      @keyframes move {
+        0% {
+          transform: translateY(0vh);
+          transition-timing-function: ease-in;
+        }
+        30% {
+          transform: translateY(10vh);
+          transition-timing-function: ease-in;
+        }
+        60% {
+          transform: translateY(40vh);
+          transition-timing-function: ease-in;
+        }
+        80% {
+          transform: translateY(60vh);
+          transition-timing-function: ease-in;
+        }
+        95% {
+          transform: translateY(75vh);
+          transition-timing-function: ease-in;
+        }
+        15%,
+        45%,
+        75%,
+        85%,
+        100% {
+          transform: translateY(90vh);
+          transition-timing-function: ease-out;
+        }
+      }
+    </style>
+    <title>Document</title>
+  </head>
+  <body>
+    <div></div>
+  </body>
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+
+      body {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100vw;
+        height: 100vh;
+        background-color: #34495e;
+      }
+
+      div {
+        width: 100px;
+        height: 100px;
+        background-color: #e27129;
+        animation-name: yyx;
+        animation-duration: 1s;
+        animation-delay: 2s;
+        animation-iteration-count: infinite;
+      }
+
+      section {
+        position: absolute;
+        font-size: 30px;
+        color: wheat;
+      }
+
+      @keyframes yyx {
+        to {
+          transform: scale(3);
+        }
+      }
+    </style>
+    <title>Document</title>
+  </head>
+  <body>
+    <div></div>
+    <section>0</section>
+  </body>
+  <script>
+    const timer = document.querySelector('section');
+    let cur = 1;
+    setTimeout(function run() {
+      timer.innerHTML = cur++;
+      setTimeout(run, 1000);
+    }, 1000);
+  </script>
+</html>

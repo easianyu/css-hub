@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+
+      body {
+        display: grid;
+        width: 100vw;
+        height: 100vh;
+        background-color: #34495e;
+      }
+
+      main {
+        position: relative;
+        overflow: hidden;
+        width: 400px;
+        height: 200px;
+        align-self: center;
+        justify-self: center;
+      }
+
+      section {
+        width: 1600px;
+        height: 200px;
+        display: grid;
+        grid-template: 1fr / repeat(4, 400px);
+        animation-name: yyx;
+        animation-duration: 4s;
+        animation-timing-function: steps(4, end);
+        animation-iteration-count: infinite;
+      }
+
+      section:hover,
+      section:hover + ul::after {
+        animation-play-state: paused;
+      }
+
+      ul {
+        /* width: 200px; */
+        /* height: 100px; */
+        /* background-color: pink; */
+        width: 200px;
+        background-color: #ddd;
+        display: grid;
+        grid-template: 1fr / repeat(4, 1fr);
+        justify-items: center;
+        font-size: 20px;
+        color: bisque;
+        list-style: none;
+        position: absolute;
+        bottom: 5px;
+        left: 50%;
+        transform: translateX(-50%);
+      }
+
+      ul::after {
+        content: '';
+        position: absolute;
+        left: 10px;
+        top: 0;
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        background-color: red;
+        z-index: -1;
+
+        animation-name: yyx2;
+        animation-duration: 4s;
+        animation-timing-function: steps(4, end);
+        animation-iteration-count: infinite;
+      }
+
+      li {
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        background: rgba(0, 0, 0, 0.4);
+        display: grid;
+        justify-items: center;
+        align-items: center;
+      }
+
+      div {
+        overflow: hidden;
+      }
+
+      img {
+        width: 100%;
+      }
+
+      @keyframes yyx2 {
+        to {
+          transform: translateX(200px);
+        }
+      }
+
+      @keyframes yyx {
+        to {
+          transform: translateX(-1600px);
+        }
+      }
+    </style>
+    <title>Document</title>
+  </head>
+  <body>
+    <main>
+      <section>
+        <div><img src="images/1.png" alt="" /></div>
+        <div><img src="images/2.png" alt="" /></div>
+        <div><img src="images/3.png" alt="" /></div>
+        <div><img src="images/4.png" alt="" /></div>
+      </section>
+      <ul>
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+      </ul>
+    </main>
+  </body>
+</html>

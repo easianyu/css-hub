@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        font-family: Georgia, 'Times New Roman', Times, serif;
+      }
+
+      body {
+        display: grid;
+        grid-template-rows: 10vh 1fr 10vh;
+        width: 100vw;
+        height: 100vh;
+      }
+
+      header {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 30px;
+        color: #8448a7;
+        background-color: #eac545;
+        animation-name: header-move;
+        animation-duration: 0.5s;
+      }
+
+      main {
+        font-size: 20px;
+        color: white;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-color: #bfc3c5;
+        animation-name: footer-rotate;
+        animation-duration: 0.5s;
+        animation-delay: 2.1s;
+        animation-fill-mode: backwards;
+      }
+
+      div {
+        width: 80vw;
+        border-radius: 10px;
+        padding: 13px;
+      }
+
+      div:nth-child(1) {
+        transform: translateY(-50px);
+        background-color: #925cb1;
+        animation-name: div-opacity;
+        animation-duration: 0.5s;
+        animation-delay: 2.7s;
+        opacity: 0.8;
+        animation-fill-mode: backwards;
+      }
+
+      div:nth-child(2) {
+        background-color: #4b9e86;
+        animation-name: div-opacity;
+        animation-duration: 0.5s;
+        animation-delay: 3.2s;
+        opacity: 0.8;
+        animation-fill-mode: backwards;
+      }
+
+      footer {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 30px;
+        color: wheat;
+        background-color: #2e3d53;
+        /* transform: scale(0);
+        animation-fill-mode: forwards; */
+        animation-fill-mode: backwards;
+        animation-name: footer-rotate;
+        animation-duration: 0.5s;
+        animation-delay: 1s;
+      }
+
+      @keyframes div-opacity {
+        from {
+          opacity: 0;
+        }
+        to {
+          opacity: 0.8;
+        }
+      }
+
+      @keyframes header-move {
+        from {
+          transform: translateX(-100vw);
+        }
+        to {
+          transform: translateX(0);
+        }
+      }
+
+      @keyframes footer-rotate {
+        from {
+          transform: scale(0) rotate(360deg);
+        }
+        to {
+          transform: scale(1) rotate(0);
+        }
+      }
+    </style>
+    <title>Document</title>
+  </head>
+  <body>
+    <header>Easian</header>
+    <main>
+      <div>
+        Need to get icons in your web project quickly? Here’s the fastest and easiest way to use
+        Font Awesome in your web-based projects (keep in mind you can use Font Awesome in lots of
+        other ways, including on the desktop).
+      </div>
+      <div>
+        Need to get icons in your web project quickly? Here’s the fastest and easiest way to use
+        Font Awesome in your web-based projects (keep in mind you can use Font Awesome in lots of
+        other ways, including on the desktop).
+      </div>
+    </main>
+    <footer>CSS-HUB</footer>
+  </body>
+  <script>
+    const timer = document.querySelector('section');
+    let cur = 1;
+    setTimeout(function run() {
+      timer.innerHTML = cur++;
+      setTimeout(run, 1000);
+    }, 1000);
+  </script>
+</html>
