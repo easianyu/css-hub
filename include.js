@@ -29,6 +29,14 @@ let cards = [
     author: 'Source Code',
     githubLink: 'https://github.com/easianyu/css-hub/tree/master/art/bouncing-ball',
   },
+
+  {
+    artName: 'Water Drop',
+    pageLink: './art/water-drop/index.html',
+    imageLink: './art/water-drop/water-drop.gif',
+    author: 'Source Code',
+    githubLink: 'https://github.com/easianyu/css-hub/tree/master/art/water-drop',
+  },
 ];
 
 // +--------------------------------------------------------------------------------+

@@ -1,0 +1,71 @@
+body {
+  background-color: #74b9ff;
+}
+
+.water {
+  position: relative;
+  width: 300px;
+  height: 300px;
+  margin: 100px auto;
+  border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
+  box-shadow: inset 10px 20px 30px rgba(0, 0, 0, 0.5), 10px 10px 20px rgba(0, 0, 0, 0.3),
+    15px 15px 30px rgba(0, 0, 0, 0.05), inset -10px -10px 15px rgba(255, 255, 255, 0.7);
+
+  animation-name: action;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+  animation-direction: alternate;
+}
+
+.water::after {
+  content: '';
+  position: absolute;
+  top: 75px;
+  left: 81px;
+  width: 10px;
+  height: 10px;
+  border-radius: 50% 50% 70% 30% / 54% 44% 56% 46%;
+  background-color: rgba(255, 255, 255, 0.6);
+  animation: reflex1 0.75s ease-in-out infinite alternate;
+}
+
+.water::before {
+  content: '';
+  position: absolute;
+  top: 60px;
+  left: 140px;
+  width: 20px;
+  height: 20px;
+  border-radius: 53% 47% 24% 76% / 32% 44% 56% 68%;
+  background-color: rgba(255, 255, 255, 0.6);
+  animation: reflex1 0.75s ease-in-out infinite alternate;
+}
+
+@keyframes action {
+  0% {
+    border-radius: 53% 47% 54% 46% / 32% 26% 74% 68%;
+  }
+
+  25% {
+    border-radius: 34% 66% 54% 46% / 54% 40% 60% 46%;
+  }
+
+  50% {
+    border-radius: 34% 66% 27% 73% / 38% 26% 74% 62%;
+  }
+
+  75% {
+    border-radius: 60% 40% 62% 38% / 38% 36% 64% 62%;
+  }
+}
+
+@keyframes reflex1 {
+  0% {
+    transform: translate(3px, 2px);
+  }
+
+  100% {
+    transform: translate(-7px, -5px);
+  }
+}
