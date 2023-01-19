@@ -37,6 +37,14 @@ let cards = [
     author: 'Source Code',
     githubLink: 'https://github.com/easianyu/css-hub/tree/master/art/water-drop',
   },
+
+  {
+    artName: 'Colorful Text Rotation',
+    pageLink: './art/text-rotate/index.html',
+    imageLink: './art/text-rotate/text-rotate.gif',
+    author: 'Source Code',
+    githubLink: 'https://github.com/easianyu/css-hub/tree/master/art/water-drop',
+  },
 ];
 
 // +--------------------------------------------------------------------------------+
