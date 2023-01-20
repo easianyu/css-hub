@@ -43,7 +43,15 @@ let cards = [
     pageLink: './art/text-rotate/index.html',
     imageLink: './art/text-rotate/text-rotate.gif',
     author: 'Source Code',
-    githubLink: 'https://github.com/easianyu/css-hub/tree/master/art/water-drop',
+    githubLink: 'https://github.com/easianyu/css-hub/tree/master/art/text-rotate',
+  },
+
+  {
+    artName: 'Focus Light Text',
+    pageLink: './art/focus-light-text/index.html',
+    imageLink: './art/focus-light-text/focus-light-text.gif',
+    author: 'Source Code',
+    githubLink: 'https://github.com/easianyu/css-hub/tree/master/art/focus-light-text',
   },
 ];
 
