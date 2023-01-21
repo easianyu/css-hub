@@ -53,6 +53,13 @@ let cards = [
     author: 'Source Code',
     githubLink: 'https://github.com/easianyu/css-hub/tree/master/art/focus-light-text',
   },
+  {
+    artName: 'Image Sliding Check',
+    pageLink: './art/img-sliding-check/index.html',
+    imageLink: './art/img-sliding-check/img-sliding-check.gif',
+    author: 'Source Code',
+    githubLink: 'https://github.com/easianyu/css-hub/tree/master/art/img-sliding-check',
+  },
 ];
 
 // +--------------------------------------------------------------------------------+
