@@ -64,7 +64,8 @@ let cards = [
 // Creates cards from the array above
 // You don't need to modify this
 let contents = [];
-Shuffle(cards).forEach((c) => {
+// Shuffle(cards).forEach((c) => {
+cards.forEach((c) => {
   contents.push([
     `<li class="card">` +
       `<img class="art-image" src='${c.imageLink}' alt='${c.artName}' />` +
